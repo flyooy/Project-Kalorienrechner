@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Kalorienrechner</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Kalorienrechner</h2>
+
+        <form>
+            <label for="size">Körpergröse</label>
+            <input id="size" type="number" />
+
+            <label for="age">Alter</label>
+            <input id="age" type="number" />
+
+            <label for="weight">Gewicht</label>
+            <input id="weight" type="number" />
+
+            <div class="radio-group">
+                <input type="radio" name="gender" id="Weiblich" value="Weiblich" checked />
+                <label for="Weiblich">Weiblich</label>
+    
+                 <input type="radio" name="gender" id="Männlich" value="Männlich" />
+                <label for="Männlich">Männlich</label>
+            </div>
+
+            <select name="pal" id="pal">
+              <option value="0.95">Schlafen</option>
+              <option value="1.2">Nur Sitzen oder Liegen</option>
+              <option value="1.5">Ausschlieslich sitzende Tatigkeit</option>
+              <option value="1.7">Sitzende Tatigkeit mit zeitweilig gehender</option>
+              <option value="1.9">Uberwiegend gehende</option>
+              <option value="2.2">Korperlich anstrengende berufliche Arbeit</option>
+            </select>
+
+            <input onclick="kalorieRechner()" type="submit" value="Submit" />
+        </form>
+
+        <div class="kcal_kJ">
+            <h3>kcal</h3>
+            <h3>kJ</h3>
+        </div>
+        <div class="umsatz">
+        <p id="Grundumsatz"></p>
+        <p id="Gesamtumsatz"></p>
+        </div>
+
+        </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
